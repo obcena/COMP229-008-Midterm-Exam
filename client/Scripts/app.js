@@ -18,6 +18,8 @@ $.fn.pageMe = function(opts){
         },
         settings = $.extend(defaults, opts);
 
+
+ //       
     var listElement = $this;
     var perPage = settings.perPage;
     var children = listElement.children();
@@ -40,6 +42,7 @@ $.fn.pageMe = function(opts){
         $('<li><a href="#" class="prev_link">«</a></li>').appendTo(pager);
     }
 
+    //
     var curr = 0;
     while(numPages > curr && (settings.hidePageNumbers==false)){
         $('<li><a href="#" class="page_link">'+(curr+1)+'</a></li>').appendTo(pager);
